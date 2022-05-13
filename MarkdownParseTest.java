@@ -55,4 +55,41 @@ public class MarkdownParseTest {
         assertTrue("Except thrown for NullPointerException", 
             exceptionThrown); 
     }
+
+    @Test
+    public void mdtest5() throws IOException{
+        Path fileName = Path.of("test-file5.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+        assertEquals(expected, links);
+    }
+
+    @Test
+    public void mdtest6() throws IOException{
+        Path fileName = Path.of("test-file6.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("page.com");
+        assertEquals(expected, links);
+    }
+
+    @Test
+    public void mdtest7() throws IOException{
+        Path fileName = Path.of("test-file7.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+        assertEquals(expected, links);
+    }
+
+    @Test
+    public void mdtest8() throws IOException{
+        Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+        assertEquals(expected, links);
+    }
 }
