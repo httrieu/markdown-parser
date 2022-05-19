@@ -108,12 +108,22 @@ public class MarkdownParseTest {
 
     @Test
     public void snippetTest2() throws IOException {
-        
+        Path fileName = Path.of("snippet2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("a.com");
+        expected.add("a.com(())");
+        expected.add("example.com");
+        assertEquals(expected, MarkdownParse.getLinks(content));
     }
 
     @Test
     public void snippetTest3() throws IOException {
-        
+        Path fileName = Path.of("snippet3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+        assertEquals(expected, MarkdownParse.getLinks(content));
     }
 
 }
