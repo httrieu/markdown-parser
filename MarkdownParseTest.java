@@ -56,9 +56,10 @@ public class MarkdownParseTest {
             exceptionThrown); 
     }
 
+    /** 
     @Test
     public void mdtest5() throws IOException{
-        Path fileName = Path.of("test-file5.md");
+        Path fileName = Path.of("test-file5v2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> expected = new ArrayList<String>();
@@ -67,7 +68,7 @@ public class MarkdownParseTest {
 
     @Test
     public void mdtest6() throws IOException{
-        Path fileName = Path.of("test-file6.md");
+        Path fileName = Path.of("test-file6v2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> expected = new ArrayList<String>();
@@ -77,7 +78,7 @@ public class MarkdownParseTest {
 
     @Test
     public void mdtest7() throws IOException{
-        Path fileName = Path.of("test-file7.md");
+        Path fileName = Path.of("test-file7v2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> expected = new ArrayList<String>();
@@ -86,10 +87,33 @@ public class MarkdownParseTest {
 
     @Test
     public void mdtest8() throws IOException{
-        Path fileName = Path.of("test-file8.md");
+        Path fileName = Path.of("test-file8v2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> expected = new ArrayList<String>();
         assertEquals(expected, links);
     }
+    */
+
+    @Test
+    public void snippetTest1() throws IOException {
+        Path fileName = Path.of("snippet1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("`google.com");
+        expected.add("google.com");
+        expected.add("ucsd.edu");
+        assertEquals(expected, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void snippetTest2() throws IOException {
+        
+    }
+
+    @Test
+    public void snippetTest3() throws IOException {
+        
+    }
+
 }
