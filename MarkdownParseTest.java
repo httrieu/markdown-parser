@@ -96,7 +96,7 @@ public class MarkdownParseTest {
     */
 
     @Test
-    public void snippetTest1() throws IOException {
+    public void snippet1Test() throws IOException {
         Path fileName = Path.of("snippet1.md");
         String content = Files.readString(fileName);
         ArrayList<String> expected = new ArrayList<>();
@@ -107,7 +107,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void snippetTest2() throws IOException {
+    public void snippet2Test() throws IOException {
         Path fileName = Path.of("snippet2.md");
         String content = Files.readString(fileName);
         ArrayList<String> expected = new ArrayList<>();
@@ -118,7 +118,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void snippetTest3() throws IOException {
+    public void snippet3Test() throws IOException {
         Path fileName = Path.of("snippet3.md");
         String content = Files.readString(fileName);
         ArrayList<String> expected = new ArrayList<>();
